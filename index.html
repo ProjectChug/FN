@@ -7,6 +7,8 @@
     
     <!-- Add a link to your favicon -->
     <link rel="icon" href="./favico.ico" type="image/x-icon">
+
+    
     
     <style>
         body {
@@ -23,7 +25,7 @@
 
         body::before {
             content: "";
-            background-image: url('./c2s3web.png'); /* Replace with your image path */
+            background-image: url('./c2s8.png'); /* Replace with your image path */
             background-size: cover;
             background-position: center;
             filter: blur(5px);
@@ -109,164 +111,236 @@
 
         /* Style the buttons with a gradient background and add hover effect */
         .downloads-content .button {
-        padding: 10px 20px;
-        background-image: linear-gradient(to left, #272727, #272727, #272727, #272727);
-        color: white;
-        border: none;
-        cursor: pointer;
-        margin: 10px;
-        font-size: 24px;
-        border-radius: 10px; /* Add rounded corners */
-        transition: box-shadow 0.3s, color 0.3s; /* Add a transition effect for smooth hover */
-        position: relative; /* Add relative positioning */
-    }
+            padding: 10px 20px;
+            background-image: linear-gradient(to left, #272727, #272727, #272727, #272727);
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 24px;
+            border-radius: 10px; /* Add rounded corners */
+            transition: box-shadow 0.3s, color 0.3s; /* Add a transition effect for smooth hover */
+            position: relative; /* Add relative positioning */
+        }
 
-    /* Add the glow effect on hover */
-    .downloads-content .button:hover {
-        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8); /* Change the color and size of the glow */
-        color: rgb(255, 255, 255); /* Change text color on hover */
-    }
+        /* Add the glow effect on hover */
+        .downloads-content .button:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8); /* Change the color and size of the glow */
+            color: rgb(255, 255, 255); /* Change text color on hover */
+        }
 
-    /* Style the text inside the button */
-    .downloads-content .button span {
-        position: relative;
-        z-index: 1;
-    }
+        /* Style the text inside the button */
+        .downloads-content .button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Add this CSS in your <style> section or in an external CSS file */
+        .image-container {
+            position: absolute; /* Position the container relative to its closest positioned ancestor */
+            top: -250px; /* Adjust the top position as needed */
+            left: 560px; /* Adjust the left position as needed */
+        }
+
+        /* Add this CSS in your <style> section or in an external CSS file */
+        .image-container {
+            position: relative; /* Position the container relative to its closest positioned ancestor */
+            width: 100%;
+            text-align: center;
+        }
+
+        .glow {
+            transition: filter 0.3s; /* Add a transition effect for smooth hover */
+        }
+
+        .glow:hover {
+            filter: brightness(1.2) hue-rotate(160deg); /* Change the hue-rotate value to adjust the color */
+        }
 
 
     </style>
 </head>
 <body>
 
+<!-- Transparent background for tabs -->
+<div class="tabs-container">
+    <div class="tab home-tab" onclick="showPage('home')">
+        <img src="./homeWeb.png" alt="Home Icon" class="tab-icon">
+    </div>
+    <div class="tab downloads-tab" onclick="showPage('downloads')">
+        <img src="./Cloud-Download.png" alt="Downloads Icon" class="tab-icon">
+    </div>
+    <div class="tab itemshop-tab" onclick="showPage('itemshop')">
+        <img src="./itemshop-icon.png" alt="Item Shop Icon" class="tab-icon">
+    </div>
+</div>
 
 
 
 
-    <!-- Transparent background for tabs -->
-    <div class="tabs-container">
-        <div class="tab home-tab" onclick="showPage('home')">
-            <img src="./home-icon.png" alt="Home Icon" class="tab-icon">
-        </div>
-        <div class="tab downloads-tab" onclick="showPage('downloads')">
-            <img src="./downloads-icon.png" alt="Downloads Icon" class="tab-icon">
-        </div>
-        <div class="tab itemshop-tab" onclick="showPage('itemshop')">
-            <img src="./itemshop-icon.png" alt="Item Shop Icon" class="tab-icon">
-        </div>
+<!-- Page content -->
+<div class="content home-content">
+    <h3>Home</h3>
+    <h4>Welcome To Project CHUG</h4>
+    <h5>Here You Can Replay OG Fortnite As It Was.</h5>
+
+    <div class="image-container center">
+        <img src="./slurppack.png" class="glow" style="width: 100%; height: auto; max-width: 650px;">
     </div>
 
-    <!-- Page content -->
-    <div class="content home-content">
-        <h3>Home</h3>
+    <style>
+        h3 {
+            font-size: 75px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 100px;
+            margin-right: 1700px;
+            font-family: 'CustomFont', sans-serif;
+        }
 
-        <style>
+        h4 {
+            font-size: 75px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 0px;
+            margin-right: 1000px;
+            font-family: 'CustomFont', sans-serif;
+        }
 
-            h3 {
-                font-size: 72px;
-                color: white;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                margin-top: 95px;
-                margin-right: 1720px;
-                font-family: 'CustomFont', sans-serif;
-            }
-            
-            </style>
+        h5 {
+            font-size: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: -95px;
+            margin-right: 1230px;
+            font-family: 'CustomFont', sans-serif;
+        }
+    </style>
 
-    </div>
+
+</div>
+
+<div class="content downloads-content">
+    <h6>Downloads</h6>
+
+    <div>
+
         
+
     </div>
-    
-    <div class="content downloads-content">
-        <h6>Downloads</h6>
-        <div class="buttons-container">
-            <button class="button" onclick="downloadButton1()"><span>Launcher - Coming Soon</span></button>
-            <button class="button" onclick="downloadButton2()"><span>Winrar</span></button>
-            <button class="button" onclick="downloadButton3()"><span>.NET 6.0</span></button>
-        </div>
 
-        <style>
-
+    <div class="buttons-container">
+        <button class="button" onclick="downloadButton1()"><span>Launcher - Coming Soon</span></button>
+        <button class="button" onclick="downloadButton2()"><span>Winrar</span></button>
+        <button class="button" onclick="downloadButton3()"><span>.NET 6.0</span></button>
+        <button class="button" onclick="downloadButton4()"><span>Build</span></button>
+    </div>
+    <style>
         h6 {
             font-size: 72px;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-top: 20px;
+            margin-top: -450px;
+            font-family: 'CustomFont', sans-serif;
+        }
+    </style>
+</div>
+
+<div class="content itemshop-content">
+    <h6>Item Shop</h6>
+
+    <h2>Coming Soon</h2>
+    
+    <style>
+
+        h2 {
+            font-size: 72px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 240px;
             font-family: 'CustomFont', sans-serif;
         }
 
-        </style>
 
-        
-    </div>
-    
-    <div class="content itemshop-content">
-        <h6>Item Shop</h6>
+    </style>
 
-        <style>
 
-            h6 {
-                font-size: 72px;
-                color: white;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                margin-top: 95px;
-                font-family: 'CustomFont', sans-serif;
-            }
-            
-            </style>
-        
-    </div>
-
-    <script>
- 
-        
-        // Function to show the selected page content
-        function showPage(page) {
-            // Hide all page contents
-            document.querySelectorAll('.content').forEach(function(content) {
-                content.style.display = 'none';
-            });
-
-            // Show the selected page content
-            document.querySelector('.' + page + '-content').style.display = 'block';
+    <style>
+        h6 {
+            font-size: 72px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 95px;
+            font-family: 'CustomFont', sans-serif;
         }
+    </style>
 
-        // Function for download button 1 (Replace with your download logic)
-        function downloadButton1() {
-            alert("Launcher Not Released Yet...");
-        }
 
-        // Function for download button 2 (Replace with your download logic)
-        function downloadButton2() {
-            const fileUrl = 'https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-623.exe';
+</div>
 
-            // Create an anchor element to trigger the download
-            const anchor = document.createElement('a');
-            anchor.href = fileUrl;
+<script>
+    // Function to show the selected page content
+    function showPage(page) {
+        // Hide all page contents
+        document.querySelectorAll('.content').forEach(function(content) {
+            content.style.display = 'none';
+        });
 
-            // Set the download attribute to specify the filename
-            anchor.setAttribute('download', 'file.zip');
+        // Show the selected page content
+        document.querySelector('.' + page + '-content').style.display = 'block';
+    }
 
-            // Simulate a click on the anchor element to trigger the download
-            anchor.click();
-        }
+    // Function for download button 1 (Replace with your download logic)
+    function downloadButton1() {
+        alert("Launcher Not Released Yet...");
+    }
 
-        // Function for download button 3 (Replace with your download logic)
-        function downloadButton3() {
-            const fileUrl = 'https://download.visualstudio.microsoft.com/download/pr/8d1443fd-a5e1-438d-8cb8-6ccb9849a54a/4f89f2b74a9c272789dfac8658a87673/dotnet-sdk-6.0.413-win-x64.exe';
+    // Function for download button 2 (Replace with your download logic)
+    function downloadButton2() {
+        const fileUrl = 'https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-623.exe';
 
-            // Create an anchor element to trigger the download
-            const anchor = document.createElement('a');
-            anchor.href = fileUrl;
+        // Create an anchor element to trigger the download
+        const anchor = document.createElement('a');
+        anchor.href = fileUrl;
 
-            // Set the download attribute to specify the filename
-            anchor.setAttribute('download', 'file.zip');
+        // Set the download attribute to specify the filename
+        anchor.setAttribute('download', 'file.zip');
 
-            // Simulate a click on the anchor element to trigger the download
-            anchor.click();
-        }
+        // Simulate a click on the anchor element to trigger the download
+        anchor.click();
+    }
 
-        // Show the "Downloads" page by default
-        showPage('home');
-    </script>
+    // Function for download button 3 (Replace with your download logic)
+    function downloadButton3() {
+        const fileUrl = 'https://download.visualstudio.microsoft.com/download/pr/8d1443fd-a5e1-438d-8cb8-6ccb9849a54a/4f89f2b74a9c272789dfac8658a87673/dotnet-sdk-6.0.413-win-x64.exe';
+
+        // Create an anchor element to trigger the download
+        const anchor = document.createElement('a');
+        anchor.href = fileUrl;
+
+        // Set the download attribute to specify the filename
+        anchor.setAttribute('download', 'file.zip');
+
+        // Simulate a click on the anchor element to trigger the download
+        anchor.click();
+    }
+
+    function downloadButton4() {
+        const fileUrl = 'https://cdn.fnbuilds.services/18.40.zip';
+
+        // Create an anchor element to trigger the download
+        const anchor = document.createElement('a');
+        anchor.href = fileUrl;
+
+        // Set the download attribute to specify the filename
+        anchor.setAttribute('download', 'file.zip');
+
+        // Simulate a click on the anchor element to trigger the download
+        anchor.click();
+    }
+
+    // Show the "Downloads" page by default
+    showPage('itemshop');
+</script>
 </body>
 </html>
