@@ -108,17 +108,31 @@
             margin-top: 20px;
         }
 
-        /* Style the buttons with a gradient background */
+        /* Style the buttons with a gradient background and add hover effect */
         .downloads-content .button {
-            padding: 10px 20px;
-            background-image: linear-gradient(to left, #0b71d8, #4aa4ff, #4aa4ff, #3586ff);
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-            font-size: 24px;
-            border-radius: 10px; /* Add rounded corners */
-        }
+        padding: 10px 20px;
+        background-image: linear-gradient(to left, #272727, #272727, #272727, #272727);
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+        font-size: 24px;
+        border-radius: 10px; /* Add rounded corners */
+        transition: box-shadow 0.3s, color 0.3s; /* Add a transition effect for smooth hover */
+        position: relative; /* Add relative positioning */
+    }
+
+    /* Add the glow effect on hover */
+    .downloads-content .button:hover {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8); /* Change the color and size of the glow */
+        color: rgb(255, 255, 255); /* Change text color on hover */
+    }
+
+    /* Style the text inside the button */
+    .downloads-content .button span {
+        position: relative;
+        z-index: 1;
+    }
     </style>
 </head>
 <body>
@@ -137,57 +151,30 @@
 
     <!-- Page content -->
     <div class="content home-content">
-        
         <h3>Home</h3>
+
         <style>
 
-        h3 {
-            font-size: 72px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-top: 100px;
-            margin-right: 1700px;
-            font-family: 'CustomFont', sans-serif;
-        }
+
 
         </style>
     </div>
     
     <div class="content downloads-content">
         <h6>Downloads</h6>
+
+
         <div class="buttons-container">
-            <button class="button" onclick="downloadButton1()">Launcher</button>
-            <button class="button" onclick="downloadButton2()">Winrar</button>
-            <button class="button" onclick="downloadButton3()">.NET 6.0</button>
+            <button class="button" onclick="downloadButton1()"><span>Launcher - Coming Soon</span></button>
+            <button class="button" onclick="downloadButton2()"><span>Winrar</span></button>
+            <button class="button" onclick="downloadButton3()"><span>.NET 6.0</span></button>
         </div>
-        <style>
-
-        h6 {
-            font-size: 72px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-top: 100px;
-            margin-right: 1600px;
-            font-family: 'CustomFont', sans-serif;
-        }
-
-        </style>
     </div>
     
     <div class="content itemshop-content">
         <h6>Item Shop</h6>
-        <style>
 
-        h6 {
-            font-size: 72px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-top: 100px;
-            margin-right: 0px;
-            font-family: 'CustomFont', sans-serif;
-        }
 
-        </style>
     </div>
 
     <script>
@@ -204,9 +191,8 @@
 
         // Function for download button 1 (Replace with your download logic)
         function downloadButton1() {
-            
-}
-        
+            // Add your download logic here
+        }
 
         // Function for download button 2 (Replace with your download logic)
         function downloadButton2() {
@@ -216,30 +202,30 @@
             const anchor = document.createElement('a');
             anchor.href = fileUrl;
 
-        // Set the download attribute to specify the filename
-        anchor.setAttribute('download', 'file.zip');
+            // Set the download attribute to specify the filename
+            anchor.setAttribute('download', 'file.zip');
 
-        // Simulate a click on the anchor element to trigger the download
-        anchor.click();
-}
-        
+            // Simulate a click on the anchor element to trigger the download
+            anchor.click();
+        }
 
+        // Function for download button 3 (Replace with your download logic)
         function downloadButton3() {
             const fileUrl = 'https://download.visualstudio.microsoft.com/download/pr/8d1443fd-a5e1-438d-8cb8-6ccb9849a54a/4f89f2b74a9c272789dfac8658a87673/dotnet-sdk-6.0.413-win-x64.exe';
 
             // Create an anchor element to trigger the download
-        const anchor = document.createElement('a');
-        anchor.href = fileUrl;
+            const anchor = document.createElement('a');
+            anchor.href = fileUrl;
 
-        // Set the download attribute to specify the filename
-        anchor.setAttribute('download', 'file.zip');
+            // Set the download attribute to specify the filename
+            anchor.setAttribute('download', 'file.zip');
 
-        // Simulate a click on the anchor element to trigger the download
-        anchor.click();
+            // Simulate a click on the anchor element to trigger the download
+            anchor.click();
         }
 
-        // Show the home page by default
-        showPage('home');
+        // Show the "Downloads" page by default
+        showPage('downloads');
     </script>
 </body>
 </html>
