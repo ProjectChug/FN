@@ -136,6 +136,13 @@
             z-index: 1;
         }
 
+        .ItemShopImage {
+            position: absolute; /* Position the container relative to its closest positioned ancestor */
+            top: 200px; /* Adjust the top position as needed */
+            left: 100px; /* Adjust the left position as needed */
+            box-shadow: 0 0 32px rgba(255, 0, 0, 0.7); /* Customize the glow color and intensity */
+        }
+
         /* Add this CSS in your <style> section or in an external CSS file */
         .image-container {
             position: absolute; /* Position the container relative to its closest positioned ancestor */
@@ -171,6 +178,19 @@
             z-index: 9999; /* Make sure the loading screen is on top */
         }
 
+        .loading-image {
+            /* Set the width and height of the loading image */
+            width: 700px; /* Adjust the width as needed */
+            height: 700px; /* Adjust the height as needed */
+    
+            /* Set the position of the loading image */
+            position: absolute; /* Position it relative to its closest positioned ancestor */
+            top: 63%; /* Adjust the top position to center vertically */
+            left: 75%; /* Adjust the left position to center horizontally */
+            transform: translate(-50%, -50%); /* Center the image precisely */
+}
+
+
         /* Loading overlay styles */
         .loading-overlay {
             position: fixed;
@@ -203,13 +223,18 @@
 <body>
 
 
-    <div class="loading-overlay"></div>
-
-    <!-- Loading screen -->
-    <div class="loading-screen">
-        <!-- Loading circle -->
-        <div class="loading-circle"></div>
-    </div>
+    <body>
+        <div class="loading-overlay"></div>
+    
+        <!-- Loading screen -->
+        <div class="loading-screen">
+            <!-- Loading circle -->
+            <div class="loading-circle"></div>
+            
+            <!-- Additional loading elements -->
+            
+            <img src="./Torin.png" alt="Loading Image" class="loading-image">
+        </div>
 
 <!-- Transparent background for tabs -->
 <div class="tabs-container">
@@ -298,8 +323,13 @@
 <div class="content itemshop-content">
     <h6>Item Shop</h6>
 
-    <h2>Coming Soon</h2>
+    <div class="ItemShopImage">
+
+       <img src="./itemshopv1.png"> 
+
+    </div>
     
+
     <style>
 
         h2 {
@@ -399,7 +429,7 @@
         }
 
         
-        setTimeout(hideLoadingScreen, 3000);
+        setTimeout(hideLoadingScreen, 1);
         
         // Function to show the selected page content
         function showPage(page) {
@@ -415,7 +445,7 @@
 
 
     // Show the "Downloads" page by default
-    showPage('home');
+    showPage('itemshop');
 </script>
 </body>
 </html>
