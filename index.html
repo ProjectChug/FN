@@ -54,6 +54,7 @@
             justify-content: space-between; /* Spread the tabs to both ends */
             align-items: center; /* Center vertically */
             padding: 3px; /* Add some padding to the tabs container */
+            
         }
 
         .tab {
@@ -158,9 +159,57 @@
         }
 
 
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Make sure the loading screen is on top */
+        }
+
+        /* Loading overlay styles */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Solid black overlay */
+            z-index: 9998; /* Place it below the loading screen */
+        }
+
+        /* Loading circle styles */
+        .loading-circle {
+            border: 4px solid transparent;
+            border-top: 4px solid #ffffff; /* Color of the circle */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite; /* Rotation animation */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
     </style>
 </head>
 <body>
+
+
+    <div class="loading-overlay"></div>
+
+    <!-- Loading screen -->
+    <div class="loading-screen">
+        <!-- Loading circle -->
+        <div class="loading-circle"></div>
+    </div>
 
 <!-- Transparent background for tabs -->
 <div class="tabs-container">
@@ -339,7 +388,33 @@
         anchor.click();
     }
 
-   
+
+    function hideLoadingScreen() {
+            const loadingScreen = document.querySelector('.loading-screen');
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            if (loadingScreen && loadingOverlay) {
+                loadingScreen.style.display = 'none';
+                loadingOverlay.style.display = 'none';
+            }
+        }
+
+        
+        setTimeout(hideLoadingScreen, 3000);
+        
+        // Function to show the selected page content
+        function showPage(page) {
+            // Hide all page contents
+            document.querySelectorAll('.content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Show the selected page content
+            document.querySelector('.' + page + '-content').style.display = 'block';
+        }
+
+
+
+    // Show the "Downloads" page by default
     showPage('home');
 </script>
 </body>
