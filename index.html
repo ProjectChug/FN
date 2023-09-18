@@ -17,7 +17,7 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align tabs to the top of the screen */
+            justify-content: flex-start; 
             align-items: center;
             text-align: center;
             position: relative;
@@ -25,7 +25,7 @@
 
         body::before {
             content: "";
-            background-image: url('./c2s8.png'); /* Replace with your image path */
+            background-image: url('./galactus.png'); 
             background-size: cover;
             background-position: center;
             filter: blur(5px);
@@ -43,17 +43,17 @@
                  url('./BurbankBigCondensed-Black.woff2') format('woff2');
         }
 
-        /* Tab system styles */
+       
         .tabs-container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Transparent black background for tabs */
+            background-color: rgba(0, 0, 0, 0.7); 
             display: flex;
-            justify-content: space-between; /* Spread the tabs to both ends */
-            align-items: center; /* Center vertically */
-            padding: 3px; /* Add some padding to the tabs container */
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 3px; 
             
         }
 
@@ -61,20 +61,20 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin: 0 20px; /* Increase margin to separate tabs */
-            padding: 15px 0; /* Remove horizontal padding and adjust vertical padding */
-            color: white; /* Set text color to white */
+            margin: 0 20px; 
+            padding: 15px 0; 
+            color: white; 
             cursor: pointer;
             font-family: 'CustomFont', sans-serif;
-            font-size: 28px; /* Increase font size for larger tabs */
-            background: none; /* Remove any background color */
-            border: none; /* Remove any border */
+            font-size: 28px; 
+            background: none; 
+            border: none; 
         }
 
         .tab-icon {
-            margin-right: 10px; /* Adjust icon margin */
-            width: 45px; /* Set the icon width */
-            height: 45px; /* Set the icon height */
+            margin-right: 10px; 
+            width: 45px; 
+            height: 45px; 
         }
 
         h1 {
@@ -85,24 +85,27 @@
             font-family: 'CustomFont', sans-serif;
         }
 
-        /* Page content styles */
+        
         .content {
             color: white;
             font-family: 'CustomFont', sans-serif;
         }
 
-        /* Hidden content initially */
+       
         .downloads-content,
         .itemshop-content {
             display: none;
         }
 
-        /* Add margin-top to move "Downloads" text down */
+
+
+
+       
         .downloads-content h6 {
-            margin-top: 100px; /* Adjust the margin to your preference */
+            margin-top: 100px; 
         }
 
-        /* Center-align the buttons and make them horizontal */
+     
         .downloads-content .buttons-container {
             display: flex;
             justify-content: center;
@@ -110,7 +113,7 @@
             margin-top: 20px;
         }
 
-        /* Style the buttons with a gradient background and add hover effect */
+    
         .downloads-content .button {
             padding: 10px 20px;
             background-image: linear-gradient(to left, #272727, #272727, #272727, #272727);
@@ -119,50 +122,50 @@
             cursor: pointer;
             margin: 10px;
             font-size: 24px;
-            border-radius: 10px; /* Add rounded corners */
-            transition: box-shadow 0.3s, color 0.3s; /* Add a transition effect for smooth hover */
-            position: relative; /* Add relative positioning */
+            border-radius: 10px; 
+            transition: box-shadow 0.3s, color 0.3s;
+            position: relative; 
         }
 
-        /* Add the glow effect on hover */
+      
         .downloads-content .button:hover {
-            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8); /* Change the color and size of the glow */
-            color: rgb(255, 255, 255); /* Change text color on hover */
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8); 
+            color: rgb(255, 255, 255); 
         }
 
-        /* Style the text inside the button */
+       
         .downloads-content .button span {
             position: relative;
             z-index: 1;
         }
 
         .ItemShopImage {
-            position: absolute; /* Position the container relative to its closest positioned ancestor */
-            top: 200px; /* Adjust the top position as needed */
-            left: 100px; /* Adjust the left position as needed */
-            box-shadow: 0 0 32px rgba(255, 0, 0, 0.7); /* Customize the glow color and intensity */
+            position: absolute; 
+            top: 200px; 
+            left: 100px; 
+            box-shadow: 0 0 32px rgba(255, 0, 0, 0.7); 
         }
 
-        /* Add this CSS in your <style> section or in an external CSS file */
+       
         .image-container {
-            position: absolute; /* Position the container relative to its closest positioned ancestor */
-            top: -250px; /* Adjust the top position as needed */
-            left: 560px; /* Adjust the left position as needed */
+            position: absolute; 
+            top: -250px; 
+            left: 560px;
         }
 
-        /* Add this CSS in your <style> section or in an external CSS file */
+   
         .image-container {
-            position: relative; /* Position the container relative to its closest positioned ancestor */
+            position: relative; 
             width: 100%;
             text-align: center;
         }
 
         .glow {
-            transition: filter 0.3s; /* Add a transition effect for smooth hover */
+            transition: filter 0.5s; 
         }
 
         .glow:hover {
-            filter: brightness(1.2) hue-rotate(160deg); /* Change the hue-rotate value to adjust the color */
+            filter: brightness(1.2) hue-rotate(120deg); 
         }
 
 
@@ -175,49 +178,49 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999; /* Make sure the loading screen is on top */
+            z-index: 9999; 
             
         }
 
         .loading-image {
-            /* Set the width and height of the loading image */
-            width: 700px; /* Adjust the width as needed */
-            height: 700px; /* Adjust the height as needed */
+            
+            width: 700px; 
+            height: 700px; 
     
-            /* Set the position of the loading image */
-            position: absolute; /* Position it relative to its closest positioned ancestor */
-            top: 63%; /* Adjust the top position to center vertically */
-            left: 75%; /* Adjust the left position to center horizontally */
-            transform: translate(-50%, -50%); /* Center the image precisely */
+          
+            position: absolute; 
+            top: 63%; 
+            left: 75%; 
+            transform: translate(-50%, -50%); 
             
 
         
         }
 
 .glow:hover {
-            filter: brightness(1.2) hue-rotate(160deg); /* Change the hue-rotate value to adjust the color */
+            filter: brightness(1.2) hue-rotate(160deg); 
         }
 
 
-        /* Loading overlay styles */
+       
         .loading-overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.98); /* Adjust the alpha (0.5) for transparency */
-        z-index: 9998; /* Place it below the loading screen */
+        background-color: rgba(0, 0, 0, 0.98);
+        z-index: 9998;
     }
 
-        /* Loading circle styles */
+       
         .loading-circle {
             border: 4px solid transparent;
-            border-top: 4px solid #ffffff; /* Color of the circle */
+            border-top: 4px solid #ffffff;
             border-radius: 50%;
             width: 40px;
             height: 40px;
-            animation: spin 1s linear infinite; /* Rotation animation */
+            animation: spin 1s linear infinite;
         }
 
         @keyframes spin {
@@ -234,12 +237,12 @@
     <body>
         <div class="loading-overlay"></div>
     
-        <!-- Loading screen -->
+   
         <div class="loading-screen">
-            <!-- Loading circle -->
+          
             <div class="loading-circle"></div>
             
-            <!-- Additional loading elements -->
+          
             
             
             
@@ -251,7 +254,7 @@
             </style>
         </div>
 
-<!-- Transparent background for tabs -->
+
 <div class="tabs-container">
     <div class="tab home-tab" onclick="showPage('home')">
         <img src="Home.png" alt="Home Icon" class="tab-icon">
@@ -262,12 +265,16 @@
     <div class="tab itemshop-tab" onclick="showPage('itemshop')">
         <img src="./itemshop-icon.png" alt="Item Shop Icon" class="tab-icon">
     </div>
+
+    <div class="tab donate-tab" onclick="redirectToDonatePage()">
+        <img src="./DonateIcon.png" alt="New Icon" class="tab-icon">
+    </div>
 </div>
 
 
 
 
-<!-- Page content -->
+
 <div class="content home-content">
     <h3>Home</h3>
     <h4>Welcome To Project CHUG</h4>
@@ -335,6 +342,9 @@
     </style>
 </div>
 
+
+
+
 <div class="content itemshop-content">
     <h6>Item Shop</h6>
 
@@ -344,6 +354,8 @@
 
     </div>
     
+
+
 
     <style>
 
@@ -372,64 +384,94 @@
 
 </div>
 
+
+
+        
+
+    </div>
+
+    
+
+    </div>
+    <style>
+        h6 {
+            font-size: 72px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: -450px;
+            font-family: 'CustomFont', sans-serif;
+        }
+    </style>
+</div>
+
 <script>
-    // Function to show the selected page content
+  
     function showPage(page) {
-        // Hide all page contents
+    
         document.querySelectorAll('.content').forEach(function(content) {
             content.style.display = 'none';
         });
 
-        // Show the selected page content
+   
         document.querySelector('.' + page + '-content').style.display = 'block';
     }
 
-    // Function for download button 1 (Replace with your download logic)
+   
     function downloadButton1() {
         alert("Launcher Not Released Yet...");
     }
 
-    // Function for download button 2 (Replace with your download logic)
+
+
+   
     function downloadButton2() {
         const fileUrl = 'https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-623.exe';
 
-        // Create an anchor element to trigger the download
+      
         const anchor = document.createElement('a');
         anchor.href = fileUrl;
 
-        // Set the download attribute to specify the filename
+       
         anchor.setAttribute('download', 'file.zip');
 
-        // Simulate a click on the anchor element to trigger the download
+        
         anchor.click();
     }
 
-    // Function for download button 3 (Replace with your download logic)
+  
     function downloadButton3() {
         const fileUrl = 'https://download.visualstudio.microsoft.com/download/pr/8d1443fd-a5e1-438d-8cb8-6ccb9849a54a/4f89f2b74a9c272789dfac8658a87673/dotnet-sdk-6.0.413-win-x64.exe';
 
-        // Create an anchor element to trigger the download
+        
         const anchor = document.createElement('a');
         anchor.href = fileUrl;
 
-        // Set the download attribute to specify the filename
+        
         anchor.setAttribute('download', 'file.zip');
 
-        // Simulate a click on the anchor element to trigger the download
+     
         anchor.click();
     }
 
-    function downloadButton4() {
-        const fileUrl = 'https://cdn.fnbuilds.services/18.40.zip';
+    function redirectToDonatePage() {
+   
+    const donationUrl = 'https://projectchug.tebex.io/';
 
-        // Create an anchor element to trigger the download
+   
+    window.open(donationUrl, '_blank');
+}
+
+    function downloadButton4() {
+        const fileUrl = 'https://cdn.fnbuilds.services/14.60.rar';
+
+       
         const anchor = document.createElement('a');
         anchor.href = fileUrl;
 
-        // Set the download attribute to specify the filename
+        
         anchor.setAttribute('download', 'file.zip');
 
-        // Simulate a click on the anchor element to trigger the download
+       
         anchor.click();
     }
 
@@ -446,20 +488,20 @@
         
         setTimeout(hideLoadingScreen, 2000);
         
-        // Function to show the selected page content
+     
         function showPage(page) {
-            // Hide all page contents
+   
             document.querySelectorAll('.content').forEach(function(content) {
                 content.style.display = 'none';
             });
 
-            // Show the selected page content
+       
             document.querySelector('.' + page + '-content').style.display = 'block';
         }
 
 
 
-    // Show the "Downloads" page by default
+    
 </script>
 </body>
 </html>
